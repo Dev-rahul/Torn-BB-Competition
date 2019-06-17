@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Bag Competition</title>
+    <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <table style="margin-top: 40px">
+   <tr>
+      <th>Position</th><th>Profile</th><th>Number of bags filled</th>
+   </tr>
+
+   <% for (var i = 0; i < data.length; /* I save the data in a variable 'quotation', I don't know how you named your variable  */  i++) { %>
+    <tr>
+      <td><%= i+1 %></td>
+      <td><%- data[i].profile %></td>
+      <td><%= data[i].count %></td>
+    </tr>    
+   <% } %>
+</table>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
